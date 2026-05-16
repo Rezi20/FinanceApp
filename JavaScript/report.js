@@ -1,8 +1,12 @@
-const items = document.querySelectorAll(".menu-item");
-const current = window.location.pathname.split("/").pop();
+    
+    /* MENU ACTIVE */
+    document.querySelectorAll(".menu-item").forEach(item => {
 
-items.forEach(i => {
-    if (i.getAttribute("href") === current) {
-        i.classList.add("active");
+    const current = window.location.pathname;
+    const target = new URL(item.href, window.location.origin).pathname;
+
+    if (current === target) {
+        item.classList.add("active");
     }
+
 });

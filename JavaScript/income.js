@@ -311,23 +311,16 @@ function refreshAll() {
     updateCategoryBox();
 }
 
-/* ACTIVE MENU */
-const menuItems = document.querySelectorAll(".menu-item");
+ /* MENU ACTIVE */
+    document.querySelectorAll(".menu-item").forEach(item => {
 
-const currentPage = window.location.pathname
-    .split("/")
-    .pop();
+    const current = window.location.pathname;
+    const target = new URL(item.href, window.location.origin).pathname;
 
-menuItems.forEach(item => {
-
-    const itemPage = item.getAttribute("href");
-
-    if (itemPage === currentPage) {
-
+    if (current === target) {
         item.classList.add("active");
-
-    } else {
-
-        item.classList.remove("active");
     }
+
 });
+
+
