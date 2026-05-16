@@ -34,12 +34,17 @@ submit.addEventListener("click", function (event) {
   //inputs
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
+  const name = document.getElementById("name").value;
   ;
 const auth = getAuth();
 createUserWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    window.location.href = "HTML/Dashboard.html";
-})
+    .then((userCredential) => {
+      // Save email and name locally
+      localStorage.setItem("userEmail", email);
+      localStorage.setItem("userName", name);
+
+      window.location.href = "HTML/Dashboard.html";
+  })
 .catch((error) => {
     alert("Enter valid credentials");
 });

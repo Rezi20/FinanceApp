@@ -180,3 +180,13 @@ menuItems.forEach(item => {
         item.classList.remove("active");
     }
 });
+
+
+/* Name & Email from Local storage, showing in Dashboard menu */
+const email = localStorage.getItem("userEmail");
+document.getElementById("userEmail").innerText = email;
+
+const name = localStorage.getItem("userName");
+document.getElementById("userName").innerText = name;
+
+/* Name & Email from Local storage, showing in Dashboard menu */

@@ -24,11 +24,9 @@
     /* LEFT SIDE IMAGE */
     .image-section {
       width: 50%;
-      background: url("logoLogin.jpg")
-        center/cover no-repeat;
+      background: url("logoLogin.jpg") center/cover no-repeat;
       position: relative;
     }
-
 
     /* RIGHT SIDE FORM */
     .form-section {
@@ -127,12 +125,10 @@
 <body class="login-page">
 
   <!-- LEFT SIDE -->
-  <div class="image-section">
-    
-  </div>
+  <div class="image-section"></div>
 
   <!-- RIGHT SIDE -->
-  <div class="form-section"> 
+  <div class="form-section">
     <div class="login-container">
 
       <div class="logo-title">My Wallet</div>
@@ -141,23 +137,18 @@
 
       <form>
         <div class="input-group">
-          <label for="email">Email</label>
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Enter your name" required />
+        </div>
 
-          <input
-            type="email"
-            id="email"
-            placeholder="Enter your email"
-            required />
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" required />
         </div>
 
         <div class="input-group">
           <label for="password">Password</label>
-
-          <input
-            type="password"
-            id="password"
-            placeholder="Enter your password"
-            required />
+          <input type="password" id="password" placeholder="Enter your password" required />
         </div>
 
         <button type="submit" id="submit">
@@ -169,5 +160,4 @@
   </div>
 
 </body>
-
 </html>
