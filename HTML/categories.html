@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Categories Dashboard</title>
+
+    <link rel="stylesheet" href="../CSS/categories.css">
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- MENU -->
+    <div class="menu">
+        <div class="menu-title">MY WALLET</div>
+
+        <a href="../HTML/dashboard.html" class="menu-item">Dashboard</a>
+        <a href="../HTML/income.html" class="menu-item">Income</a>
+        <a href="../HTML/expenses.html" class="menu-item">Expenses</a>
+        <a href="../HTML/categories.html" class="menu-item">Categories</a>
+        <a href="../HTML/report.html" class="menu-item">Report</a>
+
+        <a class="menu-item logout" href="../index.html">Logout</a>
+    </div>
+
+    <!-- MAIN -->
+    <div class="main">
+        <h1>Expense Categories</h1>
+        <div class="grid" id="grid"></div>
+    </div>
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+    <div class="modal-content">
+
+        <div class="modal-title" id="modalTitle"></div>
+
+        <!-- LIMIT EDIT -->
+        <div class="limit-section">
+            <label>Set Limit:</label>
+
+            <input id="limitInput" type="number">
+
+            <button id="saveLimitBtn">
+                Save Limit
+            </button>
+        </div>
+
+        <div id="expenseList"></div>
+
+        <button class="close" id="closeBtn">
+            Close
+        </button>
+
+    </div>
+</div>
+
+<script src="../JavaScript/categories.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Income Overview</title>
+
+<link rel="stylesheet" href="../CSS/income.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- MENU -->
+    <div class="menu">
+
+        <div class="menu-title">MY WALLET</div>
+
+        <a href="../HTML/dashboard.html" class="menu-item">Dashboard</a>
+        <a href="../HTML/income.html" class="menu-item">Income</a>
+        <a href="../HTML/expenses.html" class="menu-item">Expenses</a>
+        <a href="../HTML/categories.html" class="menu-item">Categories</a>
+        <a href="../HTML/report.html" class="menu-item">Report</a>
+
+        <div class="menu-bottom">
+
+            <a href="../index.html" style="text-decoration: none;">
+                <div class="menu-item logout">Logout</div>
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+
+        <!-- LEFT -->
+        <div class="container">
+
+            <h1>Income Overview</h1>
+
+            <br><br><br>
+
+            <button class="add-btn" id="openModal">
+                Add Income
+            </button>
+
+            <div class="stats">
+
+                <div class="stat-box">
+                    <div>Total Income</div>
+                    <div id="totalIncome">$0</div>
+                </div>
+
+                <div class="stat-box">
+                    <div>Average Income</div>
+                    <div id="avgIncome">$0</div>
+                </div>
+
+                <div class="stat-box">
+                    <div>Number of Incomes</div>
+                    <div id="countIncome">0</div>
+                </div>
+
+            </div>
+
+            <div class="chart-container">
+                <canvas id="incomeChart"></canvas>
+            </div>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Description</th>
+                        <th>Amount</th>
+                        <th>Source</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="incomeList"></tbody>
+
+            </table>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div class="sidebar">
+
+            <div class="chart-container">
+                <canvas id="incomePieChart"></canvas>
+            </div>
+
+            <div class="category-box">
+
+                <div class="category-title">
+                    Income by Source
+                </div>
+
+                <div id="categoryList"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+
+    <div class="modal-content">
+
+        <input type="hidden" id="editIndex">
+
+        <div class="input-group">
+            <input id="description" placeholder="Description">
+        </div>
+
+        <div class="input-group">
+            <input id="amount" type="number" placeholder="Amount">
+        </div>
+
+        <div class="input-group">
+            <input id="category" placeholder="Source">
+        </div>
+
+        <div class="input-group">
+            <input id="date" type="date">
+        </div>
+
+        <button class="submit-btn" id="saveBtn">
+            Add
+        </button>
+
+    </div>
+
+</div>
+
+<script src="../JavaScript/income.js"></script>
+
+</body>
+</html>

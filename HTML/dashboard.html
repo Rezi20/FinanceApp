@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finance App</title>
+
+<link rel="stylesheet" href="../CSS/dashboard.css?v=123">
+</head>
+
+<body>
+
+<div class="menu">
+    <div class="menu-title">MY WALLET</div>
+
+    <a href="../HTML/dashboard.html" class="menu-item">Dashboard</a>
+    <a href="../HTML/income.html" class="menu-item">Income</a>
+    <a href="../HTML/expenses.html" class="menu-item">Expenses</a>
+    <a href="../HTML/categories.html" class="menu-item">Categories</a>
+    <a href="../HTML/report.html" class="menu-item">Report</a>
+
+    <div class="menu-bottom">
+        <a href="../index.html" style="text-decoration: none;">
+            <div class="menu-item logout">Logout</div>
+        </a>
+    </div>
+</div>
+
+<div class="page-content">
+
+    <!-- DASHBOARD -->
+    <div id="dashboardTab">
+
+        <div class="big-summary">
+            <div class="big-left">
+                <div class="big-avatar">👤</div>
+
+                <div class="big-info">
+                    <h2 id="userName">Your Name</h2>
+                    <p id="userEmail">you@email.com</p>
+                </div>
+            </div>
+        </div>
+
+        <br><br><br>
+
+        <div class="dashboard">
+
+            <div class="card">
+                <h3>Total Balance</h3>
+                <div id="balance">$0</div>
+            </div>
+
+            <div class="card">
+                <h3>Total Income</h3>
+                <div id="income">$0</div>
+            </div>
+
+            <div class="card">
+                <h3>Total Expenses</h3>
+                <div id="expenses">$0</div>
+            </div>
+
+            <div class="card">
+                <h3>Savings Rate</h3>
+                <div id="savings">0%</div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <br><br><br>
+
+    <!-- GOALS -->
+    <div id="financesTab">
+
+        <h1 class="goals-title">My Goals</h1>
+
+        <div class="goal-box">
+
+            <div class="goal-grid">
+
+                <input id="goalName" placeholder="Goal name">
+
+                <input id="goalAmount" type="number" placeholder="Target amount">
+
+                <input id="goalStart" type="date">
+
+                <input id="goalEnd" type="date">
+
+                <select id="goalCategory">
+                    <option value="Travel">Travel</option>
+                    <option value="Transport">Transport</option>
+                    <option value="Shopping">Shopping</option>
+                    <option value="Health & Medical">Health & Medical</option>
+                    <option value="Health & Fitness">Gym & Fitness</option>
+                    <option value="Food">Food</option>
+                    <option value="Technology">Technology</option>
+                    <option value="Bills">Bills</option>
+                    <option value="Entertainment">Entertainment</option>
+                </select>
+
+            </div>
+
+            <button onclick="saveGoal()" id="goalBtn">
+                Create Goal
+            </button>
+
+        </div>
+
+        <div id="goalList"></div>
+
+    </div>
+
+</div>
+
+<script src="../JavaScript/dashboard.js"></script>
+
+</body>
+</html>

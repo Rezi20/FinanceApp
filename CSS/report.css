@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #eef4ff;
+}
+
+/* LAYOUT */
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* SIDEBAR MENU */
+.menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 220px;
+    height: 100vh;
+    background: #ffffff;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #dbe9ff;
+}
+
+.menu-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c4a6b;
+    margin-bottom: 40px;
+}
+
+.menu-item {
+    padding: 14px 16px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: #2c4a6b;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.menu-item:hover {
+    background: #f0f6ff;
+}
+
+.menu-item.active {
+    background: #4a90e2;
+    color: white;
+}
+
+.logout {
+    margin-top: auto;
+    color: #d64545;
+}
+
+.logout:hover {
+    background: #ffe9e9;
+}
+
+/* MAIN */
+.main {
+    margin-left: 220px;
+    padding: 40px;
+    width: 100%;
+}
+
+h1 {
+    color: #2c4a6b;
+    margin-bottom: 20px;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+/* CARD */
+.card {
+    background: #ffffff;
+    border: 1px solid #dbe9ff;
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.10);
+}
+
+.title {
+    font-size: 13px;
+    color: #6b7c93;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.value {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2c4a6b;
+    margin-bottom: 6px;
+}
+
+.sub {
+    font-size: 13px;
+    color: #7b8aa0;
+    line-height: 1.4;
+}
+
+/* SCORE */
+.score {
+    font-size: 34px;
+    font-weight: 800;
+}
+
+.good { color: #2ecc71; }
+.warn { color: #f39c12; }
+.bad { color: #e74c3c; }
+
+/* PROGRESS BAR */
+.bar-bg {
+    height: 10px;
+    background: #eef4ff;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.bar-fill {
+    height: 100%;
+    background: #4a90e2;
+}

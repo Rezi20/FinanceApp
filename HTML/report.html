@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Report</title>
+
+<link rel="stylesheet" href="../CSS/report.css">
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <div class="menu">
+        <div class="menu-title">MY WALLET</div>
+
+        <a href="../HTML/dashboard.html" class="menu-item">Dashboard</a>
+        <a href="../HTML/income.html" class="menu-item">Income</a>
+        <a href="../HTML/expenses.html" class="menu-item">Expenses</a>
+        <a href="../HTML/categories.html" class="menu-item">Categories</a>
+        <a href="../HTML/report.html" class="menu-item">Report</a>
+
+        <a href="../index.html" class="menu-item logout">Logout</a>
+    </div>
+
+    <!-- MAIN -->
+    <div class="main">
+
+        <h1>Financial Report</h1>
+
+        <div class="grid">
+
+            <div class="card">
+                <div class="title">Spending Overview</div>
+                <div class="value">$2,150</div>
+                <div class="sub">Average daily: $72</div>
+            </div>
+
+            <div class="card">
+                <div class="title">Savings Rate</div>
+                <div class="value">38%</div>
+                <div class="sub">Healthy saving behavior</div>
+            </div>
+
+            <div class="card">
+                <div class="title">Financial Health Score</div>
+                <div class="score good">82</div>
+                <div class="sub">Good financial control</div>
+            </div>
+
+            <div class="card">
+                <div class="title">Top Spending Category</div>
+                <div class="value">Food</div>
+                <div class="sub">Highest spending area this month</div>
+            </div>
+
+            <div class="card">
+                <div class="title">Lowest Spending Category</div>
+                <div class="value">Health & Medical</div>
+                <div class="sub">Minimal spending activity</div>
+            </div>
+
+            <div class="card">
+                <div class="title">Spending Distribution</div>
+
+                <div class="sub">Food</div>
+                <div class="bar-bg"><div class="bar-fill" style="width:35%"></div></div>
+
+                <div class="sub">Bills</div>
+                <div class="bar-bg"><div class="bar-fill" style="width:25%"></div></div>
+
+                <div class="sub">Shopping</div>
+                <div class="bar-bg"><div class="bar-fill" style="width:20%"></div></div>
+            </div>
+
+        </div>
+
+        <div class="card" style="margin-top:20px;">
+            <div class="title">Insights</div>
+            <div class="sub">
+                Your spending is mainly driven by Food and Bills.  
+                Transport and Health expenses remain low, showing balanced control.  
+                Your financial health score indicates stable and safe spending behavior.
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="../JavaScript/report.js"></script>
+</body>
+</html>

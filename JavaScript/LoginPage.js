@@ -38,7 +38,7 @@ submit.addEventListener("click", function (event) {
 const auth = getAuth();
 createUserWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
-    window.location.href = "Dashboard.html";
+    window.location.href = "HTML/Dashboard.html";
 })
 .catch((error) => {
     alert("Enter valid credentials");
