@@ -43,7 +43,7 @@ createUserWithEmailAndPassword(auth, email, password)
       localStorage.setItem("userEmail", email);
       localStorage.setItem("userName", name);
 
-      window.location.href = "HTML/dashboard.html";
+      window.location.href = "./HTML/dashboard.html";
   })
 .catch((error) => {
     alert("Enter valid credentials");
